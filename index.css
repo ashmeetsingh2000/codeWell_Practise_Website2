@@ -70,7 +70,7 @@ section {
     max-width: 100%;
 
     margin: 0 auto;
-    padding: 30px 0px;
+    padding: 30px;
 }
 
 /*-----------------------------------------------------------------------
@@ -131,6 +131,65 @@ section {
     width: 16px;
     height: 16px;
     margin: 0 5px 0 0;
+}
+
+
+
+
+.mobile_Navigation {
+    position: fixed;
+
+    right: 0;
+    top: 0;
+
+    z-index: 10;
+}
+
+.mobile_Navigation button {
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 30px;
+    display: none;
+}
+
+.mobile_PageLinks {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    z-index: 5;
+}
+
+.mobile_PageLinks {
+    background-color: white;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: .3s ease-in-out;
+    transform: translateX(100%);
+}
+
+.show_hamburger {
+    transform: translateX(0)
+}
+
+.mobile_PageLinks svg {
+    position: relative;
+    left: 65px;
+}
+
+.mobile_PageLinks a {
+    color: black;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+    margin: 15px 20px 0 0;
+    transition: .2s ease-in-out;
 }
 
 /*-----------------------------------------------------------------------
@@ -267,6 +326,8 @@ section {
 .heroImage img {
     width: 100%;
     height: 600px;
+
+    z-index: 3;
 }
 
 /*-----------------------------------------------------------------------
@@ -322,7 +383,7 @@ section {
 .testimonial_Wrapper {
     width: 100%;
     background-color: var(--bg_blue);
-    padding: 30px;
+    padding: 30px 0px;
 }
 
 .testimonial_Content {
@@ -415,6 +476,7 @@ section {
 -----------------------------------------------------------------------*/
 .price_Wrapper {
     width: 420px;
+    max-width: 100%;
     margin: 0 auto;
     text-align: center;
 }
@@ -435,7 +497,7 @@ section {
 }
 
 .price_Box {
-    margin: 50px 0 30px 0;
+    margin: 50px auto 30px auto;
     text-align: left;
     background-color: #fbf8f3;
     border: 2px solid rgb(255, 69, 0, 0.5);
@@ -521,7 +583,7 @@ section {
 .footer_Right a {
     color: black;
     font-size: 18px;
-    margin: 0 0 0 5px;
+    margin: 0 0 0 10px;
     text-decoration: none;
 }
 
@@ -530,7 +592,6 @@ section {
 }
 
 .footer_Right svg {
-    margin-right: 15px;
     width: 20px;
     height: 20px;
 }
@@ -538,3 +599,107 @@ section {
 /*-----------------------------------------------------------------------
 -----------------------------footer Ends---------------------------------
 -----------------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------
+-----------------------------Media Quries--------------------------------
+-----------------------------------------------------------------------*/
+
+@media screen and (max-width: 1000px) {
+    .leftSide_Content {
+        padding: 50px 20px 0 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .topSection_Content {
+        flex-direction: column-reverse;
+    }
+
+    .leftSide_Content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .heroImage {
+        width: 100%;
+        position: relative;
+        display: block;
+        text-align: center;
+
+        margin: 20px 0 40px 0;
+    }
+
+    .heroImage img {
+        width: 350px;
+        max-width: 100%;
+
+        margin: 0 auto;
+        height: 500px;
+    }
+
+
+
+
+
+
+
+    .testimonials {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .pageLinks {
+        display: none;
+    }
+
+    .mobile_Navigation button {
+        display: block;
+    }
+
+
+
+
+
+    .leftSide_Content h1 {
+        font-size: 25px;
+    }
+
+    .action_Button {
+        flex-direction: column;
+    }
+
+    .action_Button button {
+        width: 190px;
+        max-width: 100%;
+
+        margin: 0 0 15px 0;
+    }
+
+
+
+
+    .features_Wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 30px;
+
+        margin-bottom: 20px;
+    }
+
+
+
+
+
+    .testimonials {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .footer_Right a {
+        font-size: 14px;
+    }
+
+}

@@ -8,6 +8,7 @@
 
     <!-- Styling sheet -->
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./media.css">
 
     <!-- favIcon -->
     <link rel="shortcut icon" href="https://i.postimg.cc/5jczvy6F/codeWell.png" type="image/png">
@@ -43,6 +44,41 @@
                 </div>
 
             </div>
+
+            <!-- Tab Mobile Navigation -->
+            <div class="mobile_Navigation">
+
+                <!-- trigger -->
+                <button onclick="show_Hamburger()">
+                    <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4H0V0H24V4ZM24 8H0V12H24V8ZM24 16H0V20H24V16Z" fill="grey" />
+                    </svg>
+                </button>
+
+                <!-- page Links -->
+                <div class="mobile_PageLinks" id="mobile_PageLinks">
+
+                    <svg width="20" height="20" version="1.1" viewBox="0 0 700 700" fill="black"
+                        onclick="hide_Hamburger()">
+                        <path
+                            d="m187.2 20.934 162.55 162.64 162.64-162.64c63.609-63.609 161.04 32.105 96.52 96.621l-162.55 162.55 162.55 162.64c63.508 63.406-33.113 160.03-96.52 96.52l-162.64-162.55-162.55 162.55c-63.508 63.508-160.03-33.113-96.621-96.52l162.64-162.64-162.64-162.55c-63.406-63.508 33.113-160.13 96.621-96.621z" />
+                    </svg>
+
+                    <a href="#">Home</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">FAQ</a>
+
+                </div>
+
+            </div>
+            <script>
+                function show_Hamburger() {
+                    document.getElementById("mobile_PageLinks").classList.add('show_hamburger');
+                }
+                function hide_Hamburger() {
+                    document.getElementById("mobile_PageLinks").classList.remove('show_hamburger');
+                }
+            </script>
             <!--------------------------------------------------------------------------------------
             -----------------------------------------Navbar Ends------------------------------------
             --------------------------------------------------------------------------------------->
@@ -51,6 +87,7 @@
             -----------------------------------------Top Section------------------------------------
             --------------------------------------------------------------------------------------->
             <div class="topSection_Content">
+
                 <div class="leftSide_Content">
 
                     <h1>Twitter analytics taken to a whole new level</h1>
@@ -98,7 +135,6 @@
                 <div class="heroImage">
                     <img src="https://i.postimg.cc/J0kKgQ11/Hero-Image-Desktop-View.webp"
                         alt="Hero image Destop View" />
-                    <!-- <img src="https://i.postimg.cc/FRqDD6XW/Hero-Image-Tablet-View.webp" alt="Hero image Mobile View" /> -->
                 </div>
 
             </div>
@@ -108,17 +144,12 @@
         </section>
     </div>
 
-    <!-- hamburgur Icon
-<svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M24 4H0V0H24V4ZM24 8H0V12H24V8ZM24 16H0V20H24V16Z" fill="black"/>
-    </svg> -->
-
     <!--------------------------------------------------------------------------------------
     ------------------------------------------Feature---------------------------------------
     --------------------------------------------------------------------------------------->
     <section>
         <div class="features_Content">
-            <h3>Features that help you<br>Tweet smarter</h3>
+            <h3>Features that help you Tweet smarter</h3>
         </div>
 
         <div class="features_Wrapper">
@@ -423,12 +454,14 @@
     ------------------------------------------Footer----------------------------------------
     --------------------------------------------------------------------------------------->
     <div class="footer_Wrapper">
+
         <section>
             <div class="logo">
                 <p>Chrip.</p>
             </div>
 
             <div class="footer_Right">
+
                 <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M25 2.309C24.117 2.701 23.168 2.965 22.172 3.084C23.189 2.475 23.97 1.51 24.337 0.36C23.386 0.924 22.332 1.334 21.21 1.555C20.313 0.598 19.032 0 17.616 0C14.437 0 12.101 2.966 12.819 6.045C8.728 5.84 5.1 3.88 2.671 0.901C1.381 3.114 2.002 6.009 4.194 7.475C3.388 7.449 2.628 7.228 1.965 6.859C1.911 9.14 3.546 11.274 5.914 11.749C5.221 11.937 4.462 11.981 3.69 11.833C4.316 13.789 6.134 15.212 8.29 15.252C6.22 16.875 3.612 17.6 1 17.292C3.179 18.689 5.768 19.504 8.548 19.504C17.69 19.504 22.855 11.783 22.543 4.858C23.505 4.163 24.34 3.296 25 2.309Z"
@@ -437,8 +470,10 @@
 
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of use</a>
+
             </div>
         </section>
+
     </div>
     <!--------------------------------------------------------------------------------------
     -----------------------------------------Footer Ends------------------------------------
